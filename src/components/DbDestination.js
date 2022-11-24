@@ -25,7 +25,7 @@ import reykjavik2 from "../assets/reykjavik2.png";
 import marrakech from "../assets/marrakech.png";
 import marrakech2 from "../assets/marrakech2.png";
 
-const DbDestination = [
+const Destinations = [
   {
     id: 1,
     name: "Bruxelles",
@@ -356,3 +356,5 @@ const DbDestination = [
     ],
   },
 ];
+
+export default Destinations;
