@@ -7,7 +7,10 @@ function Home() {
     <div className="flex flex-col items-center my-2">
       <h1>Vous ne savez pas où partir en voyage ?</h1>
       <Link to={"/quiz"} element={<Quiz />}>
-        <button className="bg-blue-200 rounded-xl px-2 shadow-md" type="button">
+        <button
+          className="bg-[#6caad9] rounded-xl px-2 shadow-md"
+          type="button"
+        >
           Faites le quiz
         </button>
       </Link>
