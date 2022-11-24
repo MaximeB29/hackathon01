@@ -1,11 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="flex justify-start items-center bg-blue-300 h-8">
-      <div className="mx-5">Find my trip</div>
-      <div>Quiz</div>
-    </div>
+    <nav className="bg-blue-300 h-8">
+      <ul className="list-none flex">
+        <li className="mx-2">
+          <Link to="/">Find my trip</Link>
+        </li>
+        <li>
+          <Link to="/quiz">Quiz</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
