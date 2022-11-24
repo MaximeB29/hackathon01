@@ -1,3 +1,14 @@
+import { BrowserRouter, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
