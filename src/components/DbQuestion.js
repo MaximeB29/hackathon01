@@ -27,7 +27,7 @@ const DbQuestion = [
     id: 5,
     question: "Frais ou Farniente ?",
     response1: "Frais",
-    response2: "Farnienete",
+    response2: "Farniente",
   },
   {
     id: 6,
