@@ -29,7 +29,7 @@ function Quiz() {
   return (
     <div>
       {endQuiz ? (
-        <Results />
+        <Results currentAnswer={currentAnswer} />
       ) : (
         <div>
           <h1>QUIZ</h1>
