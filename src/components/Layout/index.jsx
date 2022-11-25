@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 function Layout() {
   return (
-    <div>
+    <div className="w-screen h-screen flex flex-col justify-between">
       <Navbar />
       <Outlet />
       <Footer />

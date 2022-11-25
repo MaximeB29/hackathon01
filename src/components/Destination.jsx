@@ -11,20 +11,38 @@ function Destination() {
   console.log(id);
 
   return (
-    <div>
+    <div className="bg-[#A6C4F2] bg-cover">
       <div className="pt-10">
-        <h1 className="text-2xl font-Inter text-center pb-10">
-          {destination.name}
-        </h1>
+        {id != 2 ? (
+          <h1 className="text-9xl font-Inter text-center pb-10">
+            {destination.name}
+          </h1>
+        ) : (
+          <h1 className="text-9xl font-Inter text-center pb-10">
+            A Lille chez Maurice
+          </h1>
+        )}
       </div>
       <div>
-        <p className="text-xl font-Inter text-center mx-20 pb-5">
+        <p className="text-sm font-Inter text-center mx-40 pb-5 md:text-xl">
           {destination.description}
         </p>
       </div>
-      <div className="flex flex-col items-center py-10">
-        <img className="w-1/2 h-80" src={destination.pic1} alt="first pic" />
-        <img className="w-1/2 h-80" src={destination.pic2} alt="second pic" />
+      <div className="flex flex-col items-center space-y-5 py-10">
+        {id != 2 ? (
+          <img
+            className="w-2/3 shadow-lg shadow-gray-500 rounded-3xl"
+            src={destination.pic1}
+            alt="first pic"
+          />
+        ) : (
+          ""
+        )}
+        <img
+          className="w-2/3 shadow-lg shadow-gray-500 rounded-3xl"
+          src={destination.pic2}
+          alt="second pic"
+        />
       </div>
     </div>
   );
