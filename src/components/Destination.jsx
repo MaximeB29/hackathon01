@@ -14,10 +14,12 @@ function Destination() {
   return (
     <div>
       <div className="pt-10">
-        <h1 className="text-2xl text-center pb-10">{destination.name}</h1>
+        <h1 className="text-2xl font-Inter text-center pb-10">
+          {destination.name}
+        </h1>
       </div>
       <div>
-        <p className="text-xl text-center mx-20 pb-5">
+        <p className="text-xl font-Inter text-center mx-20 pb-5">
           {destination.description}
         </p>
       </div>
