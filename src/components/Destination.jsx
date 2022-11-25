@@ -1,6 +1,7 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Destinations from "./DbDestination";
+import Quiz from "./Quiz/Quiz";
 
 function Destination() {
   const { id } = useParams();
@@ -44,6 +45,14 @@ function Destination() {
           alt="second pic"
         />
       </div>
+      <Link to={"/quiz"} element={<Quiz />}>
+        <button
+          type="button"
+          className="bg-[#6caad9] rounded-xl px-2 shadow-md"
+        >
+          Refaire le quiz
+        </button>
+      </Link>
     </div>
   );
 }
