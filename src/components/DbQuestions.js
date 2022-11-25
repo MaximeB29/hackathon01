@@ -1,4 +1,4 @@
-export const DbQuestions = [
+const DbQuestions = [
   {
     id: 1,
     question: "Thé ou Café ?",
@@ -153,3 +153,5 @@ export const DbQuestions = [
     answers: [{ response: "Tropique" }, { response: "Tropico" }],
   },
 ];
+
+export default DbQuestions;
