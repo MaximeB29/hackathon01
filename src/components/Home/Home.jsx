@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Quiz from "../Quiz/Quiz";
 import bghome from "../../assets/bg/bg-home.png";
+import AllDestinations from "../AllDestinations";
 
 function Home() {
   return (
@@ -35,7 +36,7 @@ function Home() {
               QUIZ
             </button>
           </Link>
-          <Link to={"/destinations"} element={<Quiz />}>
+          <Link to={"/alldestinations"} element={<Quiz />}>
             <button
               className="bg-[#8BB2ED] rounded-xl shadow-md shadow-gray-500 text-[40px] p-6"
               type="button"

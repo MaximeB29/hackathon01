@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import Layout from "./components/Layout";
 import Quiz from "./components/Quiz/Quiz";
 import Results from "./components/Results/Results";
+import AllDestinations from "./components/AllDestinations";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="*" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/quiz/destination/:id" element={<Destination />} />
+          <Route path="/alldestinations" element={<AllDestinations />} />
         </Route>
       </Routes>
     </BrowserRouter>
