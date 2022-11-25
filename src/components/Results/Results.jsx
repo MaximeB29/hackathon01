@@ -28,7 +28,7 @@ function Results({ currentAnswer }) {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center mt-10">
       <Link
         to={`/quiz/destination/${getDestination()}`}
         element={<Destination />}
@@ -40,6 +40,7 @@ function Results({ currentAnswer }) {
           Découvre ta destination ici
         </button>
       </Link>
+      <br />
       <div>Merci d'avoir répondu au quiz !</div>
     </div>
   );

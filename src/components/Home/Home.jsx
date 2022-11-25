@@ -26,7 +26,7 @@ function Home() {
             />
           </div>
         </div>
-        <div className="flex flex-col justify-evenly">
+        <div className="flex flex-col justify-evenly items-center">
           <Link to={"/quiz"} element={<Quiz />}>
             <button
               className="bg-[#8BB2ED] rounded-xl shadow-md shadow-gray-500 text-[40px] p-6"
