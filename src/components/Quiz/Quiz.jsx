@@ -5,12 +5,7 @@ import DbQuestions from "../DbQuestions";
 const TOTAL_NUM_QUESTIONS = 10;
 
 function Quiz() {
-  const { id } = useParams();
-  const getDbQuestion = (DbQuestionId) =>
-    DbQuestions.find((item) => item.id === parseInt(id));
-  const question = getDbQuestion(id);
-
-  const [currentQuestion, setCurentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const [optionChosen, setOptionChosen] = useState(false);
 
@@ -20,26 +15,33 @@ function Quiz() {
   const handleAnswerOptionCLick = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < TOTAL_NUM_QUESTIONS) {
-      setCurentQuestion(nextQuestion);
+      setCurrentQuestion(nextQuestion);
     }
     return setOptionChosen(true);
   };
 
   return (
-    <div className="flex flex-col justify-items-center">
-      <h1 className="flex justify-center">Mes préferences de voayage</h1>
-      <div className="mt-11 ml-60 mb-72 h-60 flex flex-col border  w-1/2 rounded-xl place-content-center p-1 bg-slate-400 shadow-xl">
-        <div className="flex justify-center -mt-12">
-          <span>Question {currentQuestion + 1}</span>/{TOTAL_NUM_QUESTIONS}
-        </div>
-        <div className="flex items-start">{randomQuestion.question}</div>
-        <div className="flex flex-col items-end gap-2 mt-10">
+    <div className="flex flex-col justify-items-center h-1/3 ">
+      <div className="flex justify-center border border-slate-400 rounded-xl bg-slate-400 mx-8 md:mx-auto md:w-2/3">
+        <span>Question {currentQuestion + 1}</span>/{TOTAL_NUM_QUESTIONS}
+      </div>
+      <div className="my-2">Tu préfères</div>
+      <div className="flex flex-col border border-slate-400 mx-8 mb-100 rounded-xl justify-center p-1 bg-slate-400 shadow-gray-400 shadow-xl h-2/3 md:mx-auto md:w-2/3 md:h-4/5">
+        <div className=" justify-start mb-10  ">{randomQuestion.question}</div>
+        <div className="flex items-end gap-2 mt-10 ">
           {randomQuestion.answers.map((answer) => (
             <button
-              className="border ring-slate-400 rounded-lg w-1/2 hover:bg-slate-300 "
+              className="border bg-white rounded-lg w-2/3 h- flex justify-center items-center mx-5 md:mx-20 md:w-1/3"
               onClick={() => handleAnswerOptionCLick(answer)}
             >
-              {answer.response}
+              <div>
+                <img
+                  className=" flex h-5 w-auto "
+                  src="/src/assets/images/bousole.png"
+                  alt="bousole"
+                />
+              </div>
+              <div className=""> {answer.response}</div>
             </button>
           ))}
         </div>
