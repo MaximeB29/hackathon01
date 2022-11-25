@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Quiz from "../Quiz/Quiz";
 import maurice from "../../assets/images/mauricelille.png";
+import AllDestinations from "../AllDestinations";
 
 function Home() {
   return (
@@ -14,6 +15,9 @@ function Home() {
         >
           Faites le quiz
         </button>
+      </Link>
+      <Link to={"/alldestinations"} element={<AllDestinations />}>
+        <button>Destianation</button>
       </Link>
       <img src={maurice} alt="maurice à lille" />
     </div>
