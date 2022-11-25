@@ -1,3 +1,4 @@
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Destination from "./components/Destination";
 import Home from "./components/Home/Home";
