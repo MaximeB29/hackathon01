@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Quiz from "../Quiz/Quiz";
-import maurice from "../../assets/images/mauricelille.png";
 
 function Home() {
   return (
-    <div className="flex flex-col items-center my-2 font-Inter">
+    <div className="flex flex-col items-center my-2">
       <h1>Vous ne savez pas où partir en voyage ?</h1>
       <Link to={"/quiz"} element={<Quiz />}>
         <button
@@ -15,7 +14,6 @@ function Home() {
           Faites le quiz
         </button>
       </Link>
-      <img src={maurice} alt="maurice à lille" />
     </div>
   );
 }
