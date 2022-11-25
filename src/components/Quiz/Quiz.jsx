@@ -5,7 +5,7 @@ import { DbQuestions } from "/src/components/DbQuestions";
 const TOTAL_NUM_QUESTIONS = 10;
 
 function Quiz() {
-  const [currentQuestion, setCurentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState(false);
   const [currentAnswer, setCurrentAnswer] = useState([]);
   const [endQuiz, setEndQuiz] = useState(false);
@@ -21,7 +21,7 @@ function Quiz() {
       setEndQuiz(true);
     }
     if (nextQuestion < TOTAL_NUM_QUESTIONS) {
-      setCurentQuestion(nextQuestion);
+      setCurrentQuestion(nextQuestion);
     }
     return setOptionChosen(true);
   };
@@ -39,7 +39,7 @@ function Quiz() {
           <div>{DbQuestions[currentQuestion].question}</div>
           <div>
             {DbQuestions[currentQuestion].answers.map((answer) => (
-              <button onClick={() => handleAnswerOptionCLick(answer)}>
+              <button onClick={() => handleAnswerOptionCLick(answer.response)}>
                 {answer.response}
               </button>
             ))}
