@@ -21,7 +21,7 @@ function Footer() {
           />
         </div>
       </div>
-      <div className="flex justify-around">
+      <div className="flex justify-around mb-3">
         <p className="text-xs">Mentions légales</p>
         <p className="text-xs">CGU</p>
         <p className="text-xs">MEKS - 2022</p>

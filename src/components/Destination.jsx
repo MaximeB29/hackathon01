@@ -45,14 +45,16 @@ function Destination() {
           alt="second pic"
         />
       </div>
-      <Link to={"/quiz"} element={<Quiz />}>
-        <button
-          type="button"
-          className="bg-[#6caad9] rounded-xl px-2 shadow-md"
-        >
-          Refaire le quiz
-        </button>
-      </Link>
+      <div className="flex justify-center mb-5">
+        <Link to={"/quiz"} element={<Quiz />}>
+          <button
+            type="button"
+            className="bg-[#8BB2ED] rounded-xl px-4 py-2 shadow-md"
+          >
+            Refaire le quiz
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
