@@ -9,7 +9,7 @@ export default function AllDestinations() {
       <div className="  ">
         <div className="grid grid-cols-2  gap-2 m-2  md:grid-cols-3  ">
           {Destinations.map((destination) => (
-            <button className="flex bg-[#8BB2ED] flex-col items-center rounded-xl p-3 shadow-lg shadow-slate-400">
+            <button className="flex flex-col items-center rounded-xl p-3 shadow-lg shadow-slate-400">
               <Link to={`/destination/${destination.id}`} className="">
                 {destination.name}
               </Link>
