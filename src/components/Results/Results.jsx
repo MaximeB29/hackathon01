@@ -35,7 +35,7 @@ function Results({ currentAnswer }) {
       >
         <button
           type="button"
-          className="bg-[#6caad9] rounded-xl px-2 shadow-md"
+          className="bg-gradient-to-r from-[#BDE0FE] to-[#E2F1FF] rounded-xl p-2 shadow-md"
         >
           Découvre ta destination ici
         </button>
